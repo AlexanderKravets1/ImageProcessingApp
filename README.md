@@ -1,2 +1,2 @@
 # ImageProcessingApp
-Java Image Processing Application 
+Python Image Processing Application 
