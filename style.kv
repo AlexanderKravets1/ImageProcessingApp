@@ -1,0 +1,56 @@
+PageManager:
+    LoadPage:
+    ColorPage:
+
+
+<LoadPage>:
+    name: "LoadPage"
+    GridLayout:
+        cols: 1
+        FileChooserIconView:
+            id: filechooser
+
+        Button:
+            text: "Select Image"
+            on_press:
+                file = filechooser.selection[0]
+                root.manager.get_screen('ColorPage').ids.img.source = file
+                app.root.current = "ColorPage"
+
+
+<ColorPage>:
+    wheel:wheel
+    name: "ColorPage"
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        ColorPicker:
+            id: wheel
+
+        GridLayout:
+            cols: 2
+            Image:
+                id: img
+                source: "TestIMG.jpg"
+                size: self.texture_size
+            GridLayout:
+                padding: 20
+                rows: 6
+                Label:
+                    text: "Stats"
+                Label:
+                    id: white
+                    text: "This image is #% white"
+                Label:
+                    id: black
+                    text: "This image is #% black"
+                Label:
+                    id: sc
+                    text: "Select a color for analysis"
+                Button:
+                    text: "Search Color"
+                    on_press: root.press()
+                Button:
+                    text: "Select New Image"
+                    on_press: app.root.current = 'LoadPage'
