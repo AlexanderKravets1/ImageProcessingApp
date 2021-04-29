@@ -1,15 +1,30 @@
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.uix.image import Image
 from kivy.properties import ObjectProperty
 from kivy.uix.colorpicker import ColorPicker
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 
+
+
 class LoadPage(Screen):
     #will need function to determine % white and % black
     #will need to update labels with those numbers
-    pass
+    def preview(self, file):
+        try:
+            self.ids.layout.remove_widget(self.img)
+        except:
+            pass
+        finally:
+            img = Image(source = file)
+            img.id = 'img'
+            #adds image below file explorer
+            self.ids.layout.add_widget(img, -1)
+            #saves a reference to the img
+            self.img = img
+
 
 class ColorPage(Screen):
     wheel = ObjectProperty(None)
@@ -29,8 +44,8 @@ class ColorPage(Screen):
 class PageManager(ScreenManager):
     pass
 
-kv = Builder.load_file("style.kv")
 
+kv = Builder.load_file("style.kv")
 class ImageApp(App):
     def build(self):
         return kv

@@ -7,11 +7,20 @@ PageManager:
     name: "LoadPage"
     GridLayout:
         cols: 1
+        id: layout
+        padding: 50
+        spacing: 20
+
         FileChooserIconView:
             id: filechooser
-
+            filters: ['*.png', '*.jpg']
+            on_selection:
+                root.preview(filechooser.selection[0])
         Button:
             text: "Select Image"
+            id: select
+            size_hint_y: None
+            height: 50
             on_press:
                 file = filechooser.selection[0]
                 root.manager.get_screen('ColorPage').ids.img.source = file
