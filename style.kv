@@ -23,6 +23,7 @@ PageManager:
             height: 50
             on_press:
                 file = filechooser.selection[0]
+                root.manager.get_screen('ColorPage').ids.dominant.text = root.process(file)
                 root.manager.get_screen('ColorPage').ids.img.source = file
                 app.root.current = "ColorPage"
 
@@ -49,11 +50,8 @@ PageManager:
                 Label:
                     text: "Stats"
                 Label:
-                    id: white
-                    text: "This image is #% white"
-                Label:
-                    id: black
-                    text: "This image is #% black"
+                    id: dominant
+                    text: ""
                 Label:
                     id: sc
                     text: "Select a color for analysis"
@@ -62,4 +60,6 @@ PageManager:
                     on_press: root.press()
                 Button:
                     text: "Select New Image"
-                    on_press: app.root.current = 'LoadPage'
+                    on_press:
+                        root.ids.sc.text = "Select a color for analysis"
+                        app.root.current = 'LoadPage'
