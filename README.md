@@ -5,11 +5,11 @@ Instructions when using OpenCV image detection (main.py):
 
 The user is prompted with two directions allowing them to choose how many images they want to load to train the OpenCV application and how many images they want to load on the webpage to search through.
 
-There is another option after the first two, that when "y" is inputed the user is allowed see the specific images they've selected, you may close out of this program when pressing "q" or may completely ignore this process by inputing any other key. 
+There is another option after the first two, that when "y" is inputted the user is allowed see the specific images they've selected, you may close out of this program when pressing "q" or may completely ignore this process by inputting any other key. 
 
 When it comes to detecting the specific images the user has selected, the webpage must be in full view and loaded. The user can access the webpage from the link to his or her localhost in the terminal. After each image is in view pressing "p" allows the user to take a screenshot. After this step the user can then close the window. 
 
-The application will use the screenshot as a template when detecting 1 to 1 identical images saving all other images the user wanted trained in the images folder for later use by the application. When the user stops the application a "detected.jpg" will appear allowing the user to see exactly the images that were detected by the openCV application. those images appear with a red rectangle higlighting them.
+The application will use the screenshot as a template when detecting 1 to 1 identical images saving all other images the user wanted trained in the images folder for later use by the application. When the user stops the application a "detected.jpg" will appear allowing the user to see exactly the images that were detected by the openCV application. those images appear with a red rectangle highlighting them.
 
 Bugs:
 
