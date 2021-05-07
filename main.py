@@ -172,6 +172,11 @@ def photosCV():
 
         if op >= 1 and op <= 25:
             print(f"{op} : number of photos trained!")
+
+        else:
+            print("Sorry try again")
+            photosCV()
+
     except:
         print("Sorry try again")
         photosCV()
@@ -185,6 +190,11 @@ def photoWeb():
 
         if od >= 5 and od <= 50:
             print(f"{od} : number of photos on webpage!")
+
+        else:
+            print("Sorry try again")
+            photoWeb()
+
     except:
         print("Sorry try again")
         photoWeb()
