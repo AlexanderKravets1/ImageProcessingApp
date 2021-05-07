@@ -16,3 +16,5 @@ Bugs:
 * Images and questions are prompted twice. This probably in most part has to do with Flask running in main.py and not on its own, I tried fixing this however, OpenCV was having trouble detecting anything on the webpage when it was outside of the main.py file.
 
 * Only one image has the likeliness of being detected. There is a problem with the same image being saved twice and the application not being able to detect or recognize other photos due their duplication. A way to solve this was to iterate through each photo in the list however, due to the previous bug and lack of time I wasn't able to fix this. 
+
+Both the Kivy color detection and OpenCV image detection applications run seperately from one another, we unfortunately didn't have to time to integrate both into one complete application. 
