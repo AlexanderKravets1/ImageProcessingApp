@@ -1,7 +1,7 @@
 # ImageProcessingApp
 Python Image Processing Application For Color Detection and Photo/Dataset Detecton
 
-Instructions when using OpenCV image detection (main.py):
+Instructions when using OpenCV image detection (Worked on by Alexander Kravets) (main.py):
 
 The user is prompted with two directions allowing them to choose how many images they want to load to train the OpenCV application and how many images they want to load on the webpage to search through.
 
